@@ -1,0 +1,571 @@
+/* ============================================
+   DALCOIN - Responsive Styles
+   Mobile First Approach
+   ============================================ */
+
+/* ============================================
+   TABLET (768px and up)
+   ============================================ */
+
+@media (min-width: 768px) {
+    /* Typography scaling */
+    :root {
+        --text-4xl: 2.5rem;
+    }
+
+    /* Header */
+    .header__top {
+        display: block;
+    }
+
+    /* Navigation */
+    .nav__cta {
+        display: block;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 140px;
+    }
+
+    .hero__buttons {
+        flex-direction: row;
+    }
+
+    /* Services Grid */
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why Us Grid */
+    .why-us__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Gallery Grid */
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Form Row */
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer */
+    .footer__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__bottom {
+        flex-direction: row;
+    }
+}
+
+/* ============================================
+   DESKTOP (1024px and up)
+   ============================================ */
+
+@media (min-width: 1024px) {
+    /* Typography scaling */
+    :root {
+        --text-4xl: 2.625rem;
+    }
+
+    /* Header - show desktop nav */
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .nav__list {
+        display: flex;
+    }
+
+    /* Intro Grid */
+    .intro__content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Services Grid */
+    .services__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Why Us Grid */
+    .why-us__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Service Area Grid */
+    .service-area__content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Service Detail Grid */
+    .service-detail__content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Values Grid */
+    .values__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Area Details Grid */
+    .area-details__content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Gallery Grid */
+    .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Contact Grid */
+    .contact__content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer Grid */
+    .footer__content {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* ============================================
+   LARGE DESKTOP (1200px and up)
+   ============================================ */
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--space-xl);
+    }
+
+    .hero__content {
+        max-width: 800px;
+    }
+}
+
+/* ============================================
+   MOBILE ONLY (below 768px)
+   ============================================ */
+
+@media (max-width: 767px) {
+    /* Base adjustments */
+    :root {
+        --text-4xl: 2rem;
+        --text-3xl: 1.75rem;
+        --text-2xl: 1.375rem;
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    /* Header */
+    .header__top {
+        display: none;
+    }
+
+    .header__main {
+        padding: var(--space-sm) 0;
+    }
+
+    .logo__text {
+        font-size: var(--text-xl);
+    }
+
+    .logo__tagline {
+        display: none;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Navigation - mobile */
+    .nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: var(--space-xl);
+        transform: translateX(-100%);
+        transition: transform var(--transition-base);
+        z-index: 999;
+    }
+
+    .nav.active {
+        transform: translateX(0);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .nav__link {
+        display: block;
+        padding: var(--space-md);
+        font-size: var(--text-lg);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav__cta {
+        display: block;
+        margin-top: var(--space-xl);
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 80px;
+        min-height: auto;
+        padding-bottom: var(--space-3xl);
+    }
+
+    .hero__title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+    }
+
+    .hero__features {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    /* Quick Contact */
+    .quick-contact__content {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .quick-contact__item {
+        justify-content: center;
+    }
+
+    /* Intro */
+    .intro__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .intro__image {
+        order: -1;
+    }
+
+    /* Services */
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: var(--space-xl);
+    }
+
+    /* Why Us */
+    .why-us__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Service Area */
+    .service-area__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .service-area__list {
+        grid-template-columns: 1fr;
+    }
+
+    .service-area__map {
+        height: 200px;
+    }
+
+    /* CTA */
+    .cta__buttons {
+        flex-direction: column;
+    }
+
+    .cta__buttons .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-md);
+    }
+
+    /* Page Header */
+    .page-header {
+        margin-top: 60px;
+        padding: var(--space-3xl) 0 var(--space-2xl);
+    }
+
+    /* Service Detail */
+    .service-detail__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .service-detail:nth-child(even) .service-detail__content {
+        direction: ltr;
+    }
+
+    .service-detail__image {
+        order: -1;
+    }
+
+    /* Pricing */
+    .pricing__list {
+        padding: var(--space-lg);
+    }
+
+    .pricing__item {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    /* Values */
+    .values__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        padding: var(--space-xl);
+    }
+
+    /* Area Details */
+    .area-details__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Gallery */
+    .gallery__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact__content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        order: -1;
+        padding: var(--space-xl);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Map */
+    .contact-map iframe {
+        height: 300px;
+    }
+
+    /* Buttons - full width on mobile */
+    .btn--lg {
+        padding: var(--space-md) var(--space-xl);
+        font-size: var(--text-base);
+    }
+
+    /* Lightbox */
+    .lightbox__close {
+        top: var(--space-md);
+        right: var(--space-md);
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE (below 375px)
+   ============================================ */
+
+@media (max-width: 374px) {
+    :root {
+        --text-4xl: 1.75rem;
+        --text-3xl: 1.5rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    .contact-form {
+        padding: var(--space-lg);
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .header,
+    .footer,
+    .nav,
+    .hero__bg,
+    .hero__overlay,
+    .btn,
+    .cta,
+    .contact-form,
+    .lightbox {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2cm 0;
+        background: #fff;
+    }
+
+    .hero__content {
+        color: #000;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .section {
+        padding: 1cm 0;
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE
+   ============================================ */
+
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #000;
+    }
+
+    .btn--outline {
+        border-width: 3px;
+    }
+
+    .form-control {
+        border-width: 2px;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Optional)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    /* Can be enabled if dark mode is desired */
+    /*
+    :root {
+        --color-light: #1a1a1a;
+        --color-white: #2d2d2d;
+        --color-text: #f0f0f0;
+        --color-text-light: #b0b0b0;
+        --color-border: #404040;
+    }
+    */
+}
+
+/* ============================================
+   HOVER STATES (Touch devices)
+   ============================================ */
+
+@media (hover: none) {
+    .service-card:hover {
+        transform: none;
+    }
+
+    .gallery__item:hover img {
+        transform: none;
+    }
+
+    .gallery__overlay {
+        opacity: 1;
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE
+   ============================================ */
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero__features {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
